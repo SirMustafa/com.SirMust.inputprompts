@@ -1,4 +1,5 @@
-"name": "com.must.inputprompts",
+{
+  "name": "com.must.inputprompts",
   "version": "1.0.0",
   "displayName": "Input Prompts",
   "description": "TMP input prompt package for keyboard, Xbox and PlayStation.",
@@ -6,3 +7,4 @@
   "author": {
     "name": "Must"
   }
+}
