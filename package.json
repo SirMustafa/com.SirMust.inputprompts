@@ -1,14 +1,16 @@
 {
-  "name": "com.sirmust.inputprompts",
-  "displayName": "Input Prompts",
-  "version": "1.0.0",
-  "unity": "6000.0",
-  "description": "TMP input prompt package for keyboard, Xbox and PlayStation.",
-  "author": {
-    "name": "Must"
-  },
-  "dependencies": {
-    "com.unity.inputsystem": "1.7.0",
-    "com.unity.textmeshpro": "3.0.6"
-  }
+  "name": "SirMust.InputPrompts",
+  "references": [
+    "Unity.TextMeshPro",
+    "Unity.InputSystem"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
 }
