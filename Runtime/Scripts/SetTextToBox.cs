@@ -158,6 +158,8 @@ public class SetTextToBox : MonoBehaviour
         if (spriteAsset == null)
             return "?";
 
+        _textBox.spriteAsset = spriteAsset;
+
         if (TryBuildCompositePrompt(action, device, spriteAsset, out string compositePrompt))
             return compositePrompt;
 
@@ -166,7 +168,7 @@ public class SetTextToBox : MonoBehaviour
             return "?";
 
         string normalized = NormalizeBindingPath(path, device);
-        return MakeSpriteTag(spriteAsset, normalized);
+        return MakeSpriteTag(normalized);
     }
 
     private bool TryBuildCompositePrompt(InputAction action, InputPromptDevice device, TMP_SpriteAsset spriteAsset, out string result)
@@ -181,8 +183,8 @@ public class SetTextToBox : MonoBehaviour
             if (!string.IsNullOrEmpty(left) && !string.IsNullOrEmpty(right))
             {
                 result =
-                    $"{MakeSpriteTag(spriteAsset, NormalizeBindingPath(left, device))}   " +
-                    $"{MakeSpriteTag(spriteAsset, NormalizeBindingPath(right, device))}";
+                    $"{MakeSpriteTag(NormalizeBindingPath(left, device))}   " +
+                    $"{MakeSpriteTag(NormalizeBindingPath(right, device))}";
                 return true;
             }
         }
@@ -191,7 +193,7 @@ public class SetTextToBox : MonoBehaviour
             string up = GetCompositePartPath(action, "up", false);
             if (!string.IsNullOrEmpty(up))
             {
-                result = MakeSpriteTag(spriteAsset, NormalizeBindingPath(up, device));
+                result = MakeSpriteTag(NormalizeBindingPath(up, device));
                 return true;
             }
         }
@@ -357,8 +359,8 @@ public class SetTextToBox : MonoBehaviour
         return path;
     }
 
-    private static string MakeSpriteTag(TMP_SpriteAsset spriteAsset, string spriteName)
+    private static string MakeSpriteTag(string spriteName)
     {
-        return $"<sprite=\"{spriteAsset.name}\" name=\"{spriteName}\">";
+        return $"<sprite name=\"{spriteName}\">";
     }
 }
