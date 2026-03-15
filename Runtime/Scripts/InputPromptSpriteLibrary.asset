@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b8287593687b54cb9b90374099ae09, type: 3}
+  m_Name: InputPromptSpriteLibrary
+  m_EditorClassIdentifier: 
+  keyboardSprites: {fileID: 11400000, guid: 1ec73867639f9584f9c215446cbc9070, type: 2}
+  xboxSprites: {fileID: 11400000, guid: e37c1e25b0127734584f79e4d0ad9534, type: 2}
+  playStationSprites: {fileID: 11400000, guid: 6c44db358d4009f4c8ee475b1278b609, type: 2}
+  switchSprites: {fileID: 11400000, guid: 342a088f9766b6c45a3b314a7337641e, type: 2}
+  steamDeckSprites: {fileID: 11400000, guid: 5149bd8cd700b6b4f8c6c601ad5ec316, type: 2}
