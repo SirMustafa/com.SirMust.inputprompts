@@ -2,121 +2,26 @@
 
 ## Türkçe
 
-Input Prompts, TextMeshPro kullanan metinlerde belirlediğiniz bir anahtar kelimeyi yakalayıp onu aktif input cihazına uygun bir ikonla değiştiren bir Unity paketidir.
+Input Prompts, oyunlarda `"Press X to Jump"` gibi metinlerde geçen tuş bilgisini, kullanılan input cihazına göre ikon olarak göstermenizi sağlayan bir Unity paketidir.
 
-Örneğin metinde:
-`Press BUTTONPROMPT to Jump`
+Paketi indirdikten sonra TextMeshPro componenti bulunan objeye paketle birlikte gelen `SetTextToBox` scriptini ekleyin. Script içindeki `Input Action Reference` alanına hangi input action’ın gösterilmesini istiyorsanız onu seçin. `Sprite Library` alanına ise paketle birlikte gelen ScriptableObject’i ekleyin. Bu ScriptableObject ikonları tutar. Temel kullanım bu kadar basittir.
 
-yazıyorsa, paket `BUTTONPROMPT` ifadesini oyuncunun kullandığı cihaza göre uygun sprite etiketiyle değiştirir.
+Kolaylık olması için pakete Xelu Free Icons kullanılarak hazırlanmış hazır bir kurulum eklenmiştir. İsterseniz bunu doğrudan kullanabilirsiniz.
 
-Örnek çıktı:
-`Press <sprite="Ps5_SpriteSheet" name="DualShock_buttonNorth"> to Jump`
+Kendi ikonlarınızı kullanmak isterseniz önce ikonlarınızı bir sprite sheet haline getirin. Daha sonra sprite sheet’i Unity içinde `Sprite Editor` ile açıp eşit parçalara bölün. Ardından sprite sheet’e sağ tıklayıp `Create > TextMeshPro > Sprite Asset` seçeneği ile TMP Sprite Asset oluşturun. Son olarak bu asset’i paketle birlikte gelen `Input Prompt Sprite Library` içindeki uygun alana yerleştirin.
 
-Böylece oyuncu Xbox ile oynuyorsa Xbox ikonu, PlayStation ile oynuyorsa PlayStation ikonu, klavye/fare kullanıyorsa ilgili tuş ikonu gösterilir.
-
-## Kurulum
-
-Unity Package Manager üzerinden paketi şu Git URL ile ekleyebilirsiniz:
-
-`https://github.com/SirMustafa/com.SirMust.inputprompts.git`
-
-## Kullanım İçin Hazırlık
-
-Önce kullanacağınız input görsellerini hazırlamanız gerekir. Bu görselleri şu siteden indirebilirsiniz:
-
-`https://thoseawesomeguys.com/prompts/`
-
-İsterseniz kendi hazır input görsellerinizi veya kendi sprite sheet’inizi de kullanabilirsiniz. Daha sonra bu görselleri bir sprite sheet haline getirin. Ardından sprite sheet’i Unity’ye import edin ve şu adımları uygulayın:
-
-- Sprite sheet’i seçin
-- `Open Sprite Editor` açın
-- Görseli eşit parçalara bölün
-
-Bölme işlemi bittikten sonra o sprite sheet’e sağ tıklayın ve şunu seçin:
-
-`Create -> TextMeshPro -> Sprite Asset`
-
-Kullanacağınız her platform için bu işlemi yapın.Örneğin:
-
-- Keyboard
-- Xbox
-- PlayStation
-
-Tüm sprite sheet’lerin TMP Sprite Asset dosyalarını oluşturduktan sonra Project penceresinde uygun bir yere sağ tıklayın ve şunu oluşturun:
-
-`Create -> Input Prompt Sprite Library`
-
-Bu paketle birlikte gelen ScriptableObject budur. Oluşturduğunuz `Input Prompt Sprite Library` objesinin içinde platformlara ayrılmış alanlar bulunur. Buradaki Keyboard, Xbox ve PlayStation alanlarına oluşturduğunuz TMP Sprite Asset dosyalarını atayın.
-
-## Text Üzerinde Kullanım
-
-Paketi kullanmak için TextMeshPro componenti olan bir objeye `Add Component` diyerek `SetTextToBox` scriptini ekleyin. Sonra Inspector içindeki alanları doldurun. Metin içinde değiştirilmesini istediğiniz anahtar kelimeyi yazın.
-
-Örneğin:
-
-`BUTTONPROMPT`
-
-Bu kadar. Paket, aktif input cihazına göre doğru sprite etiketini üretir ve TextMeshPro metnini buna göre günceller.
+Umarım faydalı olur.
 
 ---
 
 ## English
 
-Input Prompts is a Unity package that detects a keyword inside TextMeshPro texts and replaces it with the correct icon for the active input device. For example, if your text contains:
+Input Prompts is a Unity package that lets you display the correct icon in texts like `"Press X to Jump"` based on the active input device.
 
-`Press BUTTONPROMPT to Jump`
+After installing the package, add the `SetTextToBox` script to the object that has a TextMeshPro component. In the script, assign the `Input Action Reference` for the input you want to display. Then assign the ScriptableObject included with the package to the `Sprite Library` field. This ScriptableObject stores the icons. That is all you need for the basic setup.
 
-the package replaces `BUTTONPROMPT` with the correct sprite tag based on the player’s current device.
+For convenience, the package already includes a ready-to-use setup based on Xelu Free Icons. You can use it directly if you want.
 
-Example output:
+If you want to use your own icons, first turn them into a sprite sheet. Then open the sprite sheet in Unity with `Sprite Editor` and slice it into equal parts. After that, right click the sprite sheet and create a TMP Sprite Asset with `Create > TextMeshPro > Sprite Asset`. Finally, place that asset into the correct field inside the included `Input Prompt Sprite Library`.
 
-`Press <sprite="Ps5_SpriteSheet" name="DualShock_buttonNorth"> to Jump`
-
-This allows the UI to show an Xbox icon when the player uses Xbox, a PlayStation icon when the player uses PlayStation, or the correct key icon when using keyboard and mouse.
-
-## Installation
-
-You can add the package through Unity Package Manager using this Git URL:
-
-`https://github.com/SirMustafa/com.SirMust.inputprompts.git`
-
-## Setup
-
-First, you need to prepare the input images you want to use.
-
-You can download prompt images from:
-
-`https://thoseawesomeguys.com/prompts/`
-
-You can also use your own input images or your own sprite sheet if you already have one. After that, convert those images into a sprite sheet. Then import the sprite sheet into Unity and follow these steps:
-
-- Select the sprite sheet
-- Open `Sprite Editor`
-- Slice the image into equal parts
-
-After slicing, right click the sprite sheet and select:
-
-`Create -> TextMeshPro -> Sprite Asset`
-
-Do this for every platform you want to support. For example:
-
-- Keyboard
-- Xbox
-- PlayStation
-
-After creating all TMP Sprite Assets, right click anywhere suitable in the Project window and create:
-
-`Create -> Input Prompt Sprite Library`
-
-This is the ScriptableObject included with this package. Inside the `Input Prompt Sprite Library`, there are separate fields for each platform. Assign your generated TMP Sprite Assets to the Keyboard, Xbox, and PlayStation fields.
-
-## Using It On Text
-
-To use the package, add the `SetTextToBox` script to a GameObject that already has a TextMeshPro component. Then fill in the fields in the Inspector. Inside your text, write the keyword you want to replace.
-For example:
-
-`BUTTONPROMPT`
-
-That’s all.
-
-The package will generate the correct sprite tag based on the active input device and update the TextMeshPro text automatically.
+Hope it helps.
