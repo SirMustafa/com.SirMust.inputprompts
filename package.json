@@ -8,6 +8,13 @@
     "com.unity.inputsystem": "1.7.0",
     "com.unity.textmeshpro": "3.0.6"
   },
+  "samples": [
+    {
+      "displayName": "Demo",
+      "description": "Example scene and setup for Input Prompts.",
+      "path": "Samples~/Demo"
+    }
+  ],
   "author": {
     "name": "Must"
   }
