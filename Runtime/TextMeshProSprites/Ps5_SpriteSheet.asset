@@ -42,7 +42,7 @@ MonoBehaviour:
     m_Unicode: 65534
     m_GlyphIndex: 0
     m_Scale: 1.5
-    m_Name: Ps5_SpriteSheet_0
+    m_Name: DualShockGamepad_leftStick
   - m_ElementType: 2
     m_Unicode: 65534
     m_GlyphIndex: 1
