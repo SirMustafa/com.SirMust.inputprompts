@@ -157,7 +157,7 @@ MonoBehaviour:
     m_Unicode: 65534
     m_GlyphIndex: 26
     m_Scale: 2
-    m_Name: DarkKeyboard_SpriteSheet_26
+    m_Name: Mouse_middleButton
   - m_ElementType: 2
     m_Unicode: 65534
     m_GlyphIndex: 27
@@ -192,7 +192,7 @@ MonoBehaviour:
     m_Unicode: 65534
     m_GlyphIndex: 33
     m_Scale: 2
-    m_Name: DarkKeyboard_SpriteSheet_33
+    m_Name: Pointer_delta
   - m_ElementType: 2
     m_Unicode: 65534
     m_GlyphIndex: 34
@@ -287,7 +287,7 @@ MonoBehaviour:
     m_Unicode: 65534
     m_GlyphIndex: 52
     m_Scale: 2
-    m_Name: DarkKeyboard_SpriteSheet_52
+    m_Name: Keyboard_leftShift
   - m_ElementType: 2
     m_Unicode: 65534
     m_GlyphIndex: 53
@@ -493,6 +493,11 @@ MonoBehaviour:
     m_GlyphIndex: 93
     m_Scale: 2
     m_Name: DarkKeyboard_SpriteSheet_93
+  - m_ElementType: 2
+    m_Unicode: 65534
+    m_GlyphIndex: 26
+    m_Scale: 2
+    m_Name: Mouse_scroll
   m_GlyphTable:
   - m_Index: 0
     m_Metrics:
